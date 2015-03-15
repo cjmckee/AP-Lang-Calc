@@ -1,0 +1,42 @@
+.outer { display: block;
+	background-color: #CE9DCE;
+	border: 2px solid #906E90;
+	border-radius: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	height: 50%;
+}
+
+.inner {
+	display: inline-block;
+	background-color: #CE9DCE;
+	border: 2px solid #906E90;
+	border-radius: 5px;
+	margin-left: 10%;
+	margin-right: auto;
+	width: 100px;
+	height: 100px;
+	margin-top: 50px;
+	text-align: center;
+	padding: 5px;
+	vertical-align: top;
+}
+
+.boss, #output{
+	display: block;
+	background-color: #CE9DCE;
+	border: 2px solid #906E90;
+	width: 50%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+input {
+padding: 2px;
+margin-top: 7px;
+margin-bottom: 20px;
+}
