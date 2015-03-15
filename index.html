@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AP Lang Score Calculator</title>
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>	
+		<link rel="stylesheet" type="text/css" href="codylang.css" />
+		<script type="text/javascript" src="codylang.js"></script>
+	</head>
+	
+	<body>
+		<h1 style="text-align: center">AP Language and Composition Score Calculator (2007 Scale)</h1>
+		<div class="outer">
+		
+			<p class="boss">Please enter your multiple choice score out of 52 and each individual essay score out of 9.</p>
+			
+			<p class="inner"><strong>Multiple Choice</strong>
+			<input type="text" class="mc" placeholder="score" size="5px"></input><br /><span id="mcoutput">Percentage</span></p>
+			
+			<p class="inner"><strong>Essay 1</strong>
+			<input type="text" id="essay1" placeholder="score" size="5px"></input></p>
+			
+			<p class="inner"><strong>Essay 2</strong>
+			<input type="text" id="essay2" placeholder="score" size="5px"></input></p>
+			
+			<p class="inner"><strong>Essay 3</strong>
+			<input type="text" id="essay3" placeholder="score" size="5px"></input></p>
+			
+			<div style="text-align: center; margin-top: 20px"><input type="button" id="calculator" value="Calculate"/></div>
+			
+			<p style="text-align: center" id="output"><strong>Score</strong></p>
+			
+		</div>
+		
+		<h3 style="text-align: center">Created by Cody McKee</h3>
+	</body>
+</html>
