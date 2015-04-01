@@ -15,8 +15,40 @@ weightedmc *= 1.2980;
 console.log(weightedmc);
 var weightedfrq = 0;
 var sum = 0;
+var weighted1 = 0;
+var weighted2 = 0;
+var weighted3 = 0;
 
-for (var k = 1; k < 4; k++)
+if ($("#grading").is(':checked') == true)
+{ weighted1 = $("#essay1").val();
+weighted1 = parseInt(weighted1);
+weighted2 = $("#essay2").val();
+weighted2 = parseInt(weighted2);
+weighted3 = $("#essay3").val();
+weighted3 = parseInt(weighted3);
+console.log(weighted1 + " " + weighted2 + " " + weighted3);
+
+	if (weighted1 > weighted2 && weighted1 > weighted3)
+	{ if (weighted2 > weighted3)
+		{ weighted3 = 0; }
+		else
+		{ weighted2 = 0;} }
+	else if (weighted2 > weighted1 && weighted2 > weighted3)
+	{ if (weighted1 > weighted3)
+		{ weighted3 = 0; }
+		else
+		{ weighted1 = 0; } }
+	else if (weighted3 > weighted1 && weighted3 > weighted2)
+	{ if (weighted1 > weighted2)
+		{ weighted2 = 0; }
+		else
+		{ weighted1 = 0;} }
+	else
+	{console.log("problem"); }
+	
+	sum = (weighted1 + weighted2 + weighted3) * 3/2; }
+else if ($("#grading").is(':checked') == false)
+{ for (var k = 1; k < 4; k++)
 { weightedfrq = $("#essay" + k).val();
 weightedfrq = parseInt(weightedfrq);
 if (weightedfrq > 9)
@@ -24,7 +56,8 @@ if (weightedfrq > 9)
 else if (weightedfrq < 0)
 	weightedfrq = 0;
 sum += weightedfrq; 
-console.log(sum);}
+console.log(sum);} }
+
 sum *= 3.0556;
 console.log(sum);
 
