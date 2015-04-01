@@ -28,25 +28,9 @@ weighted3 = $("#essay3").val();
 weighted3 = parseInt(weighted3);
 console.log(weighted1 + " " + weighted2 + " " + weighted3);
 
-	if (weighted1 > weighted2 && weighted1 > weighted3)
-	{ if (weighted2 > weighted3)
-		{ weighted3 = 0; }
-		else
-		{ weighted2 = 0;} }
-	else if (weighted2 > weighted1 && weighted2 > weighted3)
-	{ if (weighted1 > weighted3)
-		{ weighted3 = 0; }
-		else
-		{ weighted1 = 0; } }
-	else if (weighted3 > weighted1 && weighted3 > weighted2)
-	{ if (weighted1 > weighted2)
-		{ weighted2 = 0; }
-		else
-		{ weighted1 = 0;} }
-	else
-	{console.log("problem"); }
+	var low = Math.min(weighted1, weighted2, weighted3)
 	
-	sum = (weighted1 + weighted2 + weighted3) * 3/2; }
+	sum = (weighted1 + weighted2 + weighted3 - low) * 3/2; }
 else if ($("#grading").is(':checked') == false)
 { for (var k = 1; k < 4; k++)
 { weightedfrq = $("#essay" + k).val();
